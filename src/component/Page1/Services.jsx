@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardContent } from "@mui/material";
 import services1 from "../../assets/Image/services1.jpg";
 import services2 from "../../assets/Image/services2.jpg";

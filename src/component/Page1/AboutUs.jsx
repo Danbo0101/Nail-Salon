@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Card, CardContent } from "@mui/material";
 import about1 from "../../assets/Image/about1.jpg";
 import about2 from "../../assets/Image/about2.jpg";

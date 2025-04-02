@@ -7,7 +7,6 @@ import AboutUs from "./AboutUs";
 import Specialties from "./Specialties";
 import Services from "./Services";
 import Gallery from "./Gallery";
-import { useRef } from "react";
 
 const HomePage = (props) => {
     const sections = [

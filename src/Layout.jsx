@@ -3,6 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import { Bounce, ToastContainer } from "react-toastify";
 import FuzzyText from "./utils/FuzzyText.jsx"
 import App1 from "./apps/App1.jsx";
+import App2 from "./apps/App2.jsx";
+import HomePage2 from "./component/Page2/HomePage2.jsx";
+import AboutUs2 from "./component/Page2/AboutUs2.jsx";
 
 
 const NotFound = () => {
@@ -23,6 +26,13 @@ const Layout = () => {
         <Suspense fallback="...is loading">
             <Routes>
                 <Route path="/template-1" element={<App1 />}>
+                </Route>
+                <Route path="/template-2" element={<App2 />}>
+                    <Route index element={<HomePage2 />} />
+                    <Route path="about" element={< AboutUs2 />} />
+                    {/* <Route path="merchant-service" element={<MerchantService />} />
+                    <Route path="templates" element={<Templates />} />
+                    <Route path="about" element={<About />} /> */}
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
