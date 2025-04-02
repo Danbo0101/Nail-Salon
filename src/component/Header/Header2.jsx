@@ -15,11 +15,11 @@ const Header2 = () => {
     const menuItems = [
         { name: "Home", link: "/template-2" },
         { name: "About Us", link: "/template-2/about" },
-        { name: "Services", link: "/" },
-        { name: "Gallery", link: "/" },
-        { name: "Specialties", link: "/" },
-        { name: "Appointment", link: "/" },
-        { name: "Contacts", link: "/" },
+        { name: "Services", link: "/template-2/services" },
+        { name: "Gallery", link: "/template-2/gallery" },
+        { name: "Specialties", link: "/template-2/specialties" },
+        { name: "Appointment", link: "/template-2" },
+        { name: "Contacts", link: "/template-2/contact" },
     ];
 
     useEffect(() => {

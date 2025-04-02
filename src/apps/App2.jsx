@@ -23,7 +23,7 @@ const App2 = (props) => {
   };
 
   return (
-    <div className="w-full" >
+    <div className="w-full bg-[#303030]" >
       <Header2 />
       <Outlet />
       <Footer2 />

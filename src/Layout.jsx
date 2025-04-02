@@ -6,6 +6,10 @@ import App1 from "./apps/App1.jsx";
 import App2 from "./apps/App2.jsx";
 import HomePage2 from "./component/Page2/HomePage2.jsx";
 import AboutUs2 from "./component/Page2/AboutUs2.jsx";
+import Services2 from "./component/Page2/Services2.jsx";
+import Gallery2 from "./component/Page2/Gallery2.jsx";
+import Specialties2 from "./component/Page2/Specialties2.jsx";
+import Contact2 from "./component/Page2/Contact2.jsx";
 
 
 const NotFound = () => {
@@ -30,9 +34,10 @@ const Layout = () => {
                 <Route path="/template-2" element={<App2 />}>
                     <Route index element={<HomePage2 />} />
                     <Route path="about" element={< AboutUs2 />} />
-                    {/* <Route path="merchant-service" element={<MerchantService />} />
-                    <Route path="templates" element={<Templates />} />
-                    <Route path="about" element={<About />} /> */}
+                    <Route path="services" element={<Services2 />} />
+                    <Route path="gallery" element={<Gallery2 />} />
+                    <Route path="specialties" element={<Specialties2 />} />
+                    <Route path="contact" element={<Contact2 />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>

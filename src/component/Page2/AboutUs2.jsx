@@ -25,8 +25,8 @@ const AboutUs2 = () => {
                         separator={<span style={{ color: "white" }}>/</span>}
                         sx={{
                             "& .MuiBreadcrumbs-separator": { color: "white" },
-                            fontSize: "16px", // Giảm kích thước trên mobile
-                            "@media (min-width: 640px)": { fontSize: "20px" }, // Trả về kích thước lớn hơn khi màn hình rộng hơn
+                            fontSize: "16px",
+                            "@media (min-width: 640px)": { fontSize: "20px" },
                             fontFamily: "serif",
                         }}
                     >
@@ -35,7 +35,7 @@ const AboutUs2 = () => {
                             color="white"
                             href="/template-2"
                             sx={{
-                                fontSize: "16px", // Nhỏ hơn trên mobile
+                                fontSize: "16px",
                                 "@media (min-width: 640px)": { fontSize: "20px" },
                                 fontFamily: "serif",
                             }}
@@ -55,7 +55,7 @@ const AboutUs2 = () => {
                     </Breadcrumbs>
                 </div>
             </div>
-            <div className="bg-[#303030] text-white flex items-center justify-center p-8" data-aos="fade-up">
+            <div className=" text-white flex items-center justify-center p-8" data-aos="fade-up">
                 <div className="max-w-screen flex flex-col md:flex-row items-center justify-center gap-10 bg-[#303030] p-6 ">
                     <div className="w-full md:w-1/3 p-4 flex justify-end">
                         <img
