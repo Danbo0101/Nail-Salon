@@ -1,9 +1,8 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Bounce, ToastContainer } from "react-toastify";
-import App from "./App";
-import HomePage from "./component/Page/HomePage";
 import FuzzyText from "./utils/FuzzyText.jsx"
+import App1 from "./apps/App1.jsx";
 
 
 const NotFound = () => {
@@ -11,8 +10,6 @@ const NotFound = () => {
         <div className="bg-black h-screen flex items-center justify-center">
             <FuzzyText
                 baseIntensity={0.2}
-            // hoverIntensity={hoverIntensity}
-            // enableHover={enableHover}
             >
                 404 Not Found
             </FuzzyText>
@@ -25,8 +22,7 @@ const Layout = () => {
     return (
         <Suspense fallback="...is loading">
             <Routes>
-                <Route path="/" element={<App />}>
-                    {/* <Route index element={<HomePage />} /> */}
+                <Route path="/template-1" element={<App1 />}>
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>

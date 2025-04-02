@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/Image/logo.png";
 
-const Header = (props) => {
+const Header1 = (props) => {
     const [active, setActive] = useState("HOME");
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,8 +18,7 @@ const Header = (props) => {
 
     return (
         <div className="bg-gradient-to-r from-[#b58d53] to-[#d4ad71] px-6 py-4">
-
-            <div className="flex items-center justify-between px-10">
+            <div className="flex items-center justify-between px-0 md:px-10">
                 <div className="flex items-center">
                     <img src={logo} alt="Logo" />
                 </div>
@@ -64,4 +63,4 @@ const Header = (props) => {
     );
 };
 
-export default Header;
+export default Header1;

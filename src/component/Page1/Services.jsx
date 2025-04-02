@@ -62,38 +62,44 @@ const Services = () => {
     ];
 
     return (
-        <div className="bg-black text-white py-20">
-            <h2 className="text-2xl md:text-4xl font-semibold text-yellow-500 brightness-75 ml-44 ">SERVICES</h2>
-            <p className="italic text-gray-400 font-medium ml-44 mb-10">We Have Many Services</p>
-            <div className="space-y-8 mt-6 pr-32">
-                {services.map((service, index) => (
-                    <Card
-                        key={index}
+        <div className="bg-black text-white py-16">
+            <h2 className="text-2xl md:text-4xl font-semibold text-yellow-500 brightness-75 text-center md:text-left mx-auto md:ml-44">
+                SERVICES
+            </h2>
+            <p className="italic text-gray-400 font-medium text-center md:text-left mx-auto md:ml-44 mb-10">
+                We Have Many Services
+            </p>
 
-                        sx={{
-                            backgroundColor: "black",
-                        }}
-                    >
+            <div className="space-y-8 mt-6 px-6 sm:px-12 md:px-20 lg:pr-32">
+                {services.map((service, index) => (
+                    <Card key={index} sx={{ backgroundColor: "black" }}>
                         <CardContent>
-                            <div className="grid grid-cols-3 gap-4 items-center ">
-                                <div className="w-full flex justify-end border-r px-10 border-gray-700">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
+                                <div className="w-full flex justify-center sm:justify-end sm:border-r px-10 border-gray-700">
                                     <img
                                         src={service.image}
                                         alt={service.title}
-                                        className="w-52 h-48 object-cover rounded-md items-center"
+                                        className="max-w-full h-auto sm:w-52 sm:h-48 object-cover rounded-md"
                                     />
                                 </div>
+                                <div className="sm:col-span-2">
+                                    <h3 className="text-xl font-bold text-yellow-500 brightness-90 mb-2 text-center sm:text-left">
+                                        {service.title}
+                                    </h3>
 
-                                <div className="col-span-2">
-                                    <h3 className="text-xl font-bold text-yellow-500 brightness-90 mb-2">{service.title}</h3>
-                                    <div className="grid grid-cols-2 gap-10">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                         {service.items.map((item, i) => (
-                                            <div key={i} className="flex justify-between border-b border-gray-700 pb-2">
+                                            <div
+                                                key={i}
+                                                className="flex flex-col sm:flex-row justify-between border-b border-gray-700 pb-2"
+                                            >
                                                 <div>
                                                     <p className="text-lg font-semibold text-white">{item.name}</p>
                                                     <p className="italic text-gray-400">{item.description}</p>
                                                 </div>
-                                                <p className="text-lg font-semibold text-yellow-500">{item.price}</p>
+                                                <p className="text-lg font-semibold text-yellow-500 sm:text-right">
+                                                    {item.price}
+                                                </p>
                                             </div>
                                         ))}
                                     </div>
@@ -104,6 +110,7 @@ const Services = () => {
                 ))}
             </div>
         </div>
+
     );
 }
 export default Services;

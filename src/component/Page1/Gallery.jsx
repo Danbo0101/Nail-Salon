@@ -30,9 +30,11 @@ const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
 
     return (
-        <div className="bg-black text-white py-20 flex flex-col gap-20 px-44 ">
-            <h2 className="text-2xl md:text-4xl font-semibold text-yellow-500 brightness-75  ">GALLERY</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
+        <div className="bg-black text-white py-16 flex flex-col gap-16 px-6 sm:px-12 md:px-20 lg:px-44">
+            <h2 className="text-2xl md:text-4xl font-semibold text-yellow-500 brightness-75 text-center">
+                GALLERY
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {images.map((column, colIndex) => (
                     <div key={colIndex} className="grid gap-4">
                         {column.map((src, index) => (
@@ -40,7 +42,7 @@ const Gallery = () => {
                                 <img
                                     src={src}
                                     alt="Gallery Image"
-                                    className="h-auto max-w-full rounded-lg cursor-pointer"
+                                    className="w-full h-auto rounded-lg cursor-pointer object-cover"
                                     onClick={() => setSelectedImage(src)}
                                 />
                             </div>
@@ -50,16 +52,16 @@ const Gallery = () => {
             </div>
             {selectedImage && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+                    className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
                     onClick={() => setSelectedImage(null)}
                 >
                     <img
                         src={selectedImage}
                         alt="Selected"
-                        className="max-w-full max-h-full rounded-lg"
+                        className="max-w-full max-h-full rounded-lg object-contain"
                     />
                     <button
-                        className="absolute top-4 right-4 text-white text-2xl"
+                        className="absolute top-4 right-4 text-white text-3xl"
                         onClick={() => setSelectedImage(null)}
                     >
                         &times;
@@ -67,6 +69,7 @@ const Gallery = () => {
                 </div>
             )}
         </div>
+
     );
 };
 

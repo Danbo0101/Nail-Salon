@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowUp } from "lucide-react";
-import Header from "./component/Header/Header";
-import Footer from "./component/Footer/Footer";
-import HomePage from "./component/Page/HomePage";
+import Header1 from "../component/Header/Header1";
+import Footer1 from "../component/Footer/Footer1";
+import HomePage from "../component/Page1/HomePage";
 
 
 
-const App = (props) => {
+const App1 = (props) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -46,12 +46,12 @@ const App = (props) => {
 
   return (
     <div className="w-full" >
-      <Header scrollToSection={scrollToSection} />
+      <Header1 scrollToSection={scrollToSection} />
       <HomePage
         scrollToSection={scrollToSection}
         sectionsRef={sectionsRef}
       />
-      <Footer />
+      <Footer1 />
       <div
         onClick={scrollToTop}
         className={`cursor-pointer fixed bottom-10 right-5 p-3 bg-yellow-500 brightness-90 text-white rounded-full shadow-lg transition-opacity duration-300 
@@ -65,4 +65,4 @@ const App = (props) => {
 };
 
 
-export default App;
+export default App1;
