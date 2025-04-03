@@ -57,7 +57,7 @@ const Contact2 = () => {
                     </Breadcrumbs>
                 </div>
             </div>
-            <div className="py-16 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div className="py-16 px-4 sm:px-6 lg:px-8 flex flex-col items-center" data-aos="fade-up">
                 <h3 className="text-yellow-300 brightness-90 text-xs md:text-sm font-serif uppercase mb-3 flex items-center gap-2">
                     <hr className="w-9 border-yellow-300 brightness-90 border" /> Get In Touch <hr className="w-9 border-yellow-300 brightness-90 border" />
                 </h3>

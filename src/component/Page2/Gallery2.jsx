@@ -22,6 +22,14 @@ const Gallery2 = () => {
 
     const [selectedImage, setSelectedImage] = useState(null);
 
+    useEffect(() => {
+        if (selectedImage) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    }, [selectedImage]);
+
     const images = [
         gallery1,
         gallery2,
@@ -88,6 +96,7 @@ const Gallery2 = () => {
                     <hr className="w-10 border-yellow-300 brightness-90 border" /> Nail Salon <hr className="w-10 border-yellow-300 brightness-90 border" />
                 </h3>
                 <h2 className="text-3xl md:text-4xl mb-10 text-yellow-300 brightness-90 font-serif">Gallery</h2>
+
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-8 place-items-center">
                     {images.map((img, index) => (
                         <img
@@ -99,37 +108,39 @@ const Gallery2 = () => {
                         />
                     ))}
                 </div>
-
-                <AnimatePresence>
-                    {selectedImage && (
-                        <motion.div
-                            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                        >
-                            <button
-                                className="absolute top-4 right-4 text-white text-3xl font-bold"
-                                onClick={() => setSelectedImage(null)}
-                            >
-                                &times;
-                            </button>
-
-                            <motion.img
-                                src={selectedImage}
-                                alt="Fullscreen"
-                                className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
-                                initial={{ scale: 0.8 }}
-                                animate={{ scale: 1 }}
-                                exit={{ scale: 0.8 }}
-                                transition={{ duration: 0.3 }}
-                            />
-                        </motion.div>
-                    )}
-                </AnimatePresence>
             </div>
 
+            {/* Modal Hiển Thị Ảnh Full Screen */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-90 flex items-center justify-center z-[1000]"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImage(null)} // Click ngoài để đóng
+                    >
+                        <button
+                            className="absolute top-4 right-4 text-white text-3xl font-bold"
+                            onClick={() => setSelectedImage(null)}
+                        >
+                            &times;
+                        </button>
+
+                        <motion.img
+                            src={selectedImage}
+                            alt="Fullscreen"
+                            className="max-w-full max-h-full object-contain"
+                            initial={{ scale: 0.8 }}
+                            animate={{ scale: 1 }}
+                            exit={{ scale: 0.8 }}
+                            transition={{ duration: 0.3 }}
+                        />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
+
     )
 }
 
