@@ -16,6 +16,8 @@ import AboutUs3 from "./component/Page3/AboutUs3.jsx";
 import Gallery3 from "./component/Page3/Gallery3.jsx";
 import Service3 from "./component/Page3/Service3.jsx";
 import Contact3 from "./component/Page3/Contact3.jsx";
+import App4 from "./apps/App4.jsx";
+import HomePage4 from "./component/Page4/HomePage4.jsx";
 
 
 const NotFound = () => {
@@ -51,6 +53,9 @@ const Layout = () => {
                     <Route path="gallery" element={<Gallery3 />} />
                     <Route path="services" element={<Service3 />} />
                     <Route path="contact" element={<Contact3 />} />
+                </Route>
+                <Route path="/template-4" element={<App4 />}>
+                    <Route index element={<HomePage4 />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
