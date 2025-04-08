@@ -29,8 +29,6 @@ const App4 = () => {
                 <Header4 />
                 <Outlet />
                 <Footer4 />
-
-                {/* Nút cuộn lên trên */}
                 <button
                     onClick={scrollToTop}
                     className={`fixed bottom-10 right-5 p-3 bg-yellow-500 brightness-90 text-white rounded-full shadow-lg transition-opacity duration-300 
