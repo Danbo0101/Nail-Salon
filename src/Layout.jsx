@@ -24,6 +24,12 @@ import AboutUs5 from "./component/Page5/AboutUs5.jsx";
 import Services5 from "./component/Page5/Services5.jsx";
 import Gallery5 from "./component/Page5/Gallery5.jsx";
 import Contact5 from "./component/Page5/Contact5.jsx";
+import App6 from "./apps/App6.jsx";
+import HomePage6 from "./component/Page6/HomePage6.jsx";
+import AboutUs6 from "./component/Page6/AboutUs6.jsx";
+import Service6 from "./component/Page6/Service6.jsx";
+import Gallery6 from "./component/Page6/Gallery6.jsx";
+import Contact6 from "./component/Page6/Contact6.jsx";
 
 
 const NotFound = () => {
@@ -68,6 +74,13 @@ const Layout = () => {
                     <Route path="services" element={<Services5 />} />
                     <Route path="gallery" element={<Gallery5 />} />
                     <Route path="contact" element={<Contact5 />} />
+                </Route>
+                <Route path="/template-6" element={<App6 />}>
+                    <Route index element={<HomePage6 />} />
+                    <Route path="about" element={< AboutUs6 />} />
+                    <Route path="services" element={<Service6 />} />
+                    <Route path="gallery" element={<Gallery6 />} />
+                    <Route path="contact" element={<Contact6 />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
