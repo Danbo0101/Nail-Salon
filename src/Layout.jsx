@@ -30,6 +30,8 @@ import AboutUs6 from "./component/Page6/AboutUs6.jsx";
 import Service6 from "./component/Page6/Service6.jsx";
 import Gallery6 from "./component/Page6/Gallery6.jsx";
 import Contact6 from "./component/Page6/Contact6.jsx";
+import App7 from "./apps/App7.jsx";
+import HomePage7 from "./component/Page7/HomePage7.jsx";
 
 
 const NotFound = () => {
@@ -81,6 +83,9 @@ const Layout = () => {
                     <Route path="services" element={<Service6 />} />
                     <Route path="gallery" element={<Gallery6 />} />
                     <Route path="contact" element={<Contact6 />} />
+                </Route>
+                <Route path="/template-7" element={<App7 />}>
+                    <Route index element={<HomePage7 />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
